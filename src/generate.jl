@@ -6,7 +6,7 @@
         [registry_description::String = "", writedir::String = pwd()];
         force::bool = true,
         METADATA_path::String = Pkg.Pkg2.dir("METADATA"),
-        registry_dirs::Vector{String} = joinpath(homedir(), ".julia", "registries", "General"),
+        registry_dirs::Vector{String} = [joinpath(homedir(), ".julia", "registries", "General")],
         stdlib_dir::String = ""
      )
 
