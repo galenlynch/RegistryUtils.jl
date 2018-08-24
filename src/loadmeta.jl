@@ -94,8 +94,15 @@ function check_packages(
             else
                 error("$pkg ver $ver: requirement $req not found")
             end
-            if ! any(w->w in r.versions, keys(req_registry[req].versions)) && 
-                error("$pkg ver $ver: compat range not satisfied")
+            available_req_versions = keys(req_registry[req].versions)
+            if ! any(w->w in r.versions, available_req_versions)
+                error(
+"""
+$pkg ver $ver: compat range not satisfied
+$pkg at $ver requires $req version in $(r.versions)
+But known versions for $req are $available_req_versions
+"""
+                )
             end
         end
     end
