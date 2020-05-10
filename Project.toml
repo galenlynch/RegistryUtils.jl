@@ -1,0 +1,14 @@
+name = "RegistryUtils"
+uuid = "7df9be73-7dfd-50c0-8315-92cf85547cfe"
+authors = ["Galen Lynch <galen.lynch@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+LibGit2 = "76f85450-5226-5b5a-8eaa-529ad045b433"
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
+Pkg = "44cfe95a-1eb2-52ea-b672-e2afdf69b78f"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+UUIDs = "cf7118a7-6976-5b1a-9a39-7adc72f591a4"
+
+[compat]
+julia = "0.6 - 1"
